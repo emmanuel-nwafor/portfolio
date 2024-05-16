@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my second portfolio.com</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: rgb(0, 0, 0);
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        margin: 40px;
+    }
+
+    .container h1 {
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: lighter;
+        animation: slideLeft 3s ease backwards;
+        margin-right: 50px;
+    }
+    .container span {
+        color: rgb(3, 150, 101);
+        font-family: sans-serif;
+        font-weight: bold;
+        font-size: 35px;
+    }
+    .container span button {
+        display: flex;
+        height: 30px;
+        width: 150px;
+        align-items: center;
+        justify-content: center;
+        color: aliceblue;
+        background-color: rgb(68, 68, 68);
+        border-radius: 6px;
+        margin-top: 20px;
+        transition: 0.3s;
+    }
+    .container span button:hover {
+        background-color: rgb(3, 150, 101);
+        opacity: .8;
+    }
+    .container img {
+        width: 500px;
+        height: 400px;
+        margin-right: 40px;
+        
+    }
+    .about {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 10px;
+        color: aliceblue;
+        margin-top: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .about img {
+        margin-left: 60px;
+        width: 600px;
+        height: 500px;
+        transition: 0.4s;
+
+    }
+    .about img:hover {
+        background: black;
+        opacity: .4;
+
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        margin: 40px;
+        margin-right: 80px;
+    }
+    .content h1 {
+        font-size: 20px;
+    }
+    .Expertise {
+        display: flex;
+        color: aliceblue;
+        margin-top: 100px;
+        margin: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    }
+    .h1 {
+        margin: 50px;
+        padding: 50px;
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .Expertise img {
+        height: 50px;
+        width: 50px;
+    }
+    .Expertise h1 {
+        margin: 50px;
+        padding: 50px;
+    }
+    .Expertise .app {
+        margin: 50px;
+        padding: 50px;
+        background-color: rgb(3, 70, 48);
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    .Expertise .app:hover {
+        background-color: rgb(3, 70, 48);
+        opacity: .6;
+    }
+    .Expertise .dev{
+        margin: 50px;
+        padding: 50px;
+        background-color: rgb(3, 70, 48);
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    .Expertise .dev:hover {
+        background-color: rgb(3, 70, 48);
+        opacity: .6;
+    }
+
+    .main {
+        display: flex;
+        color: aliceblue;
+        margin-top: 100px;
+        margin: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .main img {
+        height: 50px;
+        width: 50px;
+    }
+    .main .design {
+        margin: 50px;
+        padding: 50px;
+        background-color: rgb(3, 70, 48);
+        border-radius: 5px;
+        transition: 0.3s;
+    }
+    .main .design:hover {
+        background-color: rgb(3, 70, 48);
+        opacity: .6;
+    }
+    .images {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .images img {
+        height: 50px;
+        width: 50px;
+        border-radius: 100px;
+    }
+
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 80px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: rgb(3, 70, 48);
+        background-color: black;
+    }
+    .nav ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+    }
+    .nav .logo {
+        display: flex;
+        color: rgb(3, 150, 101);
+        margin-left: 100px;
+        animation: slideRight 3s ease forwards;
+    }
+    .nav ul li a {
+        text-decoration: none;
+        color: rgb(3, 150, 101);
+        margin: 20px;
+        padding: 7px 15px;  
+        text-transform: uppercase;
+        transition: 0.3s;
+        animation: slideTop .5s ease forwards;
+        animation-delay: calc(.2s * var(--i));
+        display: flex;
+        
+    }
+    .nav ul li a:hover {
+        background-color: rgb(204, 231, 255);
+    }
+    .nav ul li .home {
+        color: rgb(3, 150, 101);
+
+    }
+    .language {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90px;
+
+    }
+    .language img {
+        height: 50px;
+        width: 50px;
+        margin: 40px;
+        transition: 0.3s;
+        /* border-radius: 50px; */
+    }
+    .language img:hover {
+        height: 60px;
+        width: 60px;
+    }
+    .portfolios {
+        align-items: center;
+        margin-top: 20px;
+
+    }  
+    .portfolios h1 {
+        color: rgb(255, 255, 255);
+        margin-left: 70px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;       
+
+    }
+    .portfolios  img {
+        height: 500px;
+        min-height: auto;
+        width: 350px;
+        min-width: auto;
+    }
+
+    /* MEDIA SELECTOR */
+
+    @media(max-width: 500px) {
+        .main .design {
+        margin: 50px;
+        padding: 50px;
+        background-color: rgb(3, 70, 48);
+        border-radius: 5px;
+        transition: 0.3s;
+        width: 120px;
+        justify-content: center;
+    }
+
+    .container img {
+        width: 300px;
+        height: 200px;
+        margin-right: 20px;  
+    }
+
+    .about {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 5px;
+        color: aliceblue;
+        margin-top: 50px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .about img {
+        margin-left: 5px;
+        width: 400px;
+        height: 300px;
+        transition: 0.4s;
+
+    }
+    }
+
+
+
+    /* KEYFRAMES ANIMATION */
+    @keyframes slideRight {
+        0% {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 100;
+        }
+    }
+    @keyframes slideLeft {
+        0% {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 100;
+        }
+    }
+    @keyframes slideTop {
+        0% {
+            transform: translateX(-50px);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 100;
+        }
+    }
+
+    
+
+</style>
+<body>
+    <nav>
+        <div class="nav">
+            <h1 class="logo">EmmaDev</h1>
+
+            <ul>
+                <li>
+                    <a href="#" class="home" style="--i:1">Home</a>
+                </li>
+                <li>
+                    <a href="#" style="--i:2" class="paragragh">About</a>
+                </li>
+                <li>
+                    <a href="#" style="--i:3">Portfolio</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <img src="c:\Users\Hp\Pictures\81178b47a8598f0c81c4799f2cdd4057.gif">
+            <h1 >Hello, I'm Emmanuel <br><span>Frontend Developer & Designer <br> <button>Download CV</button></span></h1>
+                
+    </div>
+
+     <br> <br> <br>
+    <div class="about">
+        <img src="c:\Users\Hp\Pictures\Programming_Customizable_Cartoon_Illustrations___Bro_Style-removebg-preview.png" >
+        <div class="content">
+            <p >
+                <h1>About Me</h1>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                Repellendus deleniti non rerum nihil veniam id voluptates 
+                nam voluptas possimus vero?
+            </p>
+        </div>
+    </div> <br> <br> <br>
+    <h1 class="h1">Expertise</h1>
+    <div class="Expertise">
+        <div class="app">
+            <img src="c:\Users\Hp\Pictures\2818149014269ef919a939c3dfec410d__1_-removebg-preview.png">
+            <h2>Web Design</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. 
+                Exercitationem quis, perferendis dolor libero laudantium 
+                aperiam inventore corrupti voluptas quisquam ea.
+            </p>
+        </div>
+        <div class="dev">
+            <img src="c:\Users\Hp\Pictures\a8a47e1327700e3f1c5a5dd57ae4d86a-removebg-preview.png">
+            <h2>Graphics Design</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. 
+                Exercitationem quis, perferendis dolor libero laudantium 
+                aperiam inventore corrupti voluptas quisquam ea.
+            </p>
+        </div>
+    </div>
+    <div class="main">
+        <div class="design">
+            <img src="c:\Users\Hp\Pictures\cb75db316e64a45ecdf0ba436e26d011-removebg-preview.png">
+            <h2>Web Developement</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, 
+                adipisicing elit. 
+                Exercitationem quis, perferendis dolor libero laudantium 
+                aperiam inventore corrupti voluptas quisquam ea.
+            </p>
+        </div>
+    </div>
+
+</body>
+<script>
+    let paragragh = document.querySelector(".paragraph").addEventListener("click", function () {
+        window.location.href="www.google.com"
+    })
+</script>
+</html>
